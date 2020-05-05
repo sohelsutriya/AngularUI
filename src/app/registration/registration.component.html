@@ -19,7 +19,8 @@
   <label id="icon" for="name"><i class="icon-credit-card "></i></label>
   <input type="text" name="name" id="name" [(ngModel)]='usr.pan' placeholder="PAN Number" required/>
   <label id="icon" for="name"><i class="icon-shield "></i></label>
-  <input type="password" name="name" id="name" [(ngModel)]='usr.password' placeholder="Password" required/>
+  <input type="password" name="name" id="name" [(ngModel)]='lc.password' placeholder="Password" required/>
    <a class="button" (click)='addNewUser()'>Register</a>
   </form>
+  <h5>Already a user! <a href="http://localhost:4200/Login">Login</a></h5>
 </div>

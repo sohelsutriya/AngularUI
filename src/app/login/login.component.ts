@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { RegistrationService } from '../registration.service';
+import { logincredentials } from '../logincredentials';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -7,13 +10,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+  lc:logincredentials = new logincredentials();
+  result;
+
+  constructor(private service:RegistrationService,private router: Router ) { }
 
   ngOnInit(): void {
   }
 
   login(){
-    //login function
+    console.log(this.lc);
+    this.service.login(this.lc).subscribe(data =>{this.result = data});
+    console.log(this.result);
+    if(this.result!=null)
+      this.router.navigate(['/BankUser'])
+      //alert("User Found");
+    else
+      alert("User Not Found");
+      console.log(this.result);
   }
 
 }

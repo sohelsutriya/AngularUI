@@ -6,5 +6,4 @@ export class user{
 	mobile : string;
 	address : string;
 	pan : string;
-	password : string;
 }

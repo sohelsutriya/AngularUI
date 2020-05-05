@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { RegistrationService } from '../registration.service';
 import { user } from '../user';
 import {Router} from "@angular/router"
+import { logincredentials } from '../logincredentials';
 
 @Component({
   selector: 'app-registration',
@@ -11,6 +12,7 @@ import {Router} from "@angular/router"
 export class RegistrationComponent implements OnInit {
 
   usr:user = new user();
+  lc:logincredentials = new logincredentials();
   abc:any;
 
   constructor(private service:RegistrationService,private router: Router) { }
@@ -24,6 +26,12 @@ export class RegistrationComponent implements OnInit {
     this.abc = this.service.addUser(this.usr)
         .subscribe( data => {
         });
+
+    this.lc.accountNo='1';
+    this.lc.username = this.usr.email;
+    this.lc.role="user";
+    
+    this.service.addLoginCredentials(this.lc).subscribe(data =>{});
         alert("Registered successfully!");
         this.router.navigate(['/Login'])
   }

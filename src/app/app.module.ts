@@ -8,12 +8,18 @@ import { LoginComponent } from './login/login.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RegistrationService } from './registration.service';
+import { UserUiComponent } from './user-ui/user-ui.component';
+import { FundtransferComponent } from './fundtransfer/fundtransfer.component';
+import { RequestsComponent } from './requests/requests.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RegistrationComponent,
-    LoginComponent
+    LoginComponent,
+    UserUiComponent,
+    FundtransferComponent,
+    RequestsComponent
   ],
   imports: [
     BrowserModule,

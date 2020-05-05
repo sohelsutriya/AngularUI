@@ -12,7 +12,7 @@ ol, ul, li {list-style:none}
 body,
 input,
 textarea,
-select {
+select,h5 {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   color: #4c4c4c;
@@ -184,3 +184,7 @@ a.button:hover {
   cursor: pointer;
 }
 
+h5{
+  margin-top: 10%;
+  margin-left: 25%;
+}
