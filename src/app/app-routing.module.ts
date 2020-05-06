@@ -5,6 +5,7 @@ import { LoginComponent } from './login/login.component';
 import { UserUiComponent } from './user-ui/user-ui.component';
 import { FundtransferComponent } from './fundtransfer/fundtransfer.component';
 import { RequestsComponent } from './requests/requests.component';
+import { AdminComponent } from './admin/admin.component';
 
 
 const routes: Routes = [];
@@ -16,7 +17,8 @@ const routes: Routes = [];
   {path:'Register',component:RegistrationComponent},
   {path:'BankUser',component:UserUiComponent},
   {path:'Transfer',component:FundtransferComponent},
-  {path:'Requests',component:RequestsComponent}
+  {path:'Requests',component:RequestsComponent},
+  {path:'Admin',component:AdminComponent}
   ])],
   exports: [RouterModule]
 })

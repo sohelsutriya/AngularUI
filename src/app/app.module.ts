@@ -11,6 +11,7 @@ import { RegistrationService } from './registration.service';
 import { UserUiComponent } from './user-ui/user-ui.component';
 import { FundtransferComponent } from './fundtransfer/fundtransfer.component';
 import { RequestsComponent } from './requests/requests.component';
+import { AdminComponent } from './admin/admin.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { RequestsComponent } from './requests/requests.component';
     LoginComponent,
     UserUiComponent,
     FundtransferComponent,
-    RequestsComponent
+    RequestsComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,
