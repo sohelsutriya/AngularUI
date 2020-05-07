@@ -1,0 +1,41 @@
+
+<div class="container">
+
+        <div class="card" style="width: 100%;">
+            <div class="card-header">
+              Add Account
+            </div>
+            <div class="card-body">
+              
+              <form>
+                <div class="col">
+                    <div class="form-group">
+                    <label>Account No</label>
+                    <input type="number"  placeholder="Enter Account No" class="form-control .form-control-sm">
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-group">
+                      <label>Account Type</label>
+                      <select type="text" placeholder="Enter Account Type" class="form-control ">
+                        <option>Savings</option>
+                        <option>Current</option>
+                      </select> 
+                    </div>
+                  </div>
+              
+              <div class="col">
+                <div class="form-group">
+                  <label>Balance</label>
+                  <input type="text" placeholder="Enter Opening Balance" class="form-control .form-control-sm" >
+                </div>
+              </div>
+              
+                <button (click)='addAccount()' type="submit" class="btn btn-danger btn-block">Submit</button>
+                
+              </form>
+            </div>
+          </div>       
+</div>
+    
+

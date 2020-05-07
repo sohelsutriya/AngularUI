@@ -1,0 +1,14 @@
+
+<div class="testbox">
+  <h1>Login</h1>
+
+  <form action="/">
+      <hr>
+  <label id="icon" for="name"><i class="icon-envelope "></i></label>
+  <input type="text" name="name" id="name" placeholder="Username" [(ngModel)]='lc.username' required/>
+  <label id="icon" for="name"><i class="icon-shield "></i></label>
+  <input type="password" name="name" id="name" placeholder="Password" [(ngModel)]='lc.password' required/>
+  <a class="button" (click)='login()'>Login</a>
+  </form>
+  <h5>Not a user! <a href="http://localhost:4200/Register">Register</a></h5>
+</div>
