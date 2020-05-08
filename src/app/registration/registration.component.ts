@@ -26,14 +26,11 @@ export class RegistrationComponent implements OnInit {
     this.abc = this.service.addUser(this.usr)
         .subscribe( data => {
         });
-
-    this.lc.accountNo='1';
     this.lc.username = this.usr.email;
     this.lc.role="user";
     
     this.service.addLoginCredentials(this.lc).subscribe(data =>{});
         alert("Registered successfully!");
-        this.router.navigate(['/Login'])
   }
   
 }

@@ -1,6 +1,6 @@
 export class logincredentials{
+    userId:number;
     username:string;
-    accountNo:string;
     password:string;
     role:string;
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RegistrationService } from '../registration.service';
 
 @Component({
   selector: 'app-user-ui',
@@ -7,11 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserUiComponent implements OnInit {
 
+  myUserId;
   balance:number;
   value:number;
-  constructor() { this.balance=500 }
+  constructor(private registerService:RegistrationService) { this.balance=500 }
 
   ngOnInit(): void {
+    this.myUserId = this.registerService.userId;
   }
 
   deposit(){

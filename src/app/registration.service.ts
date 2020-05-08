@@ -2,12 +2,14 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { user } from './user';
 import { logincredentials } from './logincredentials';
-import { Observable } from 'rxjs';
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class RegistrationService {
+
+  userId:number;
 
   constructor(private http:HttpClient) { }
 

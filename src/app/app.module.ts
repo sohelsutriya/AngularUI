@@ -25,7 +25,7 @@ import { MyAccountComponent } from './user-ui/my-account/my-account.component';
     RequestsComponent,
     AdminComponent,
     AddAccountComponent,
-    MyAccountComponent
+    MyAccountComponent,
   ],
   imports: [
     BrowserModule,

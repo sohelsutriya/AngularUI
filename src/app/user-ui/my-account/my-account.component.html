@@ -12,15 +12,10 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td>8888888</td>
-        <td>Savings</td>
-        <td>₹ 200</td>
-      </tr>
-      <tr>
-        <td>9999999</td>
-        <td>Current</td>
-        <td>₹ 700</td>
+      <tr *ngFor = "let account of myAccountsList">
+        <td>{{account.accountNo}}</td>
+        <td>{{account.accountType}}</td>
+        <td>₹ {{account.balance}}</td>
       </tr>
     </tbody>
   </table>

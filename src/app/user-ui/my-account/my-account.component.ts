@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { account } from 'src/app/account';
+import { UserService } from 'src/app/user.service';
+import { UserUiComponent } from '../user-ui.component';
 
 @Component({
   selector: 'app-my-account',
@@ -7,9 +10,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MyAccountComponent implements OnInit {
 
-  constructor() { }
+  myAccountsList:account[];
+
+  constructor(private userService:UserService, private userComp:UserUiComponent) { }
 
   ngOnInit(): void {
+    this.loadMyAccounts();
+  }
+
+  loadMyAccounts(){
+    this.userService.getAccounts(this.userComp.myUserId).subscribe(data =>{this.myAccountsList = data});
   }
 
 }

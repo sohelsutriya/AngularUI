@@ -12,6 +12,7 @@ export class LoginComponent implements OnInit {
 
   lc:logincredentials = new logincredentials();
   logincred_list:logincredentials[];
+  userFound:boolean = false;
   result;
 
   constructor(private service:RegistrationService,private router: Router ) { }
@@ -24,12 +25,14 @@ export class LoginComponent implements OnInit {
     this.logincred_list.forEach(cred => {
       if(cred.username==this.lc.username){
         if(cred.password==this.lc.password){
+          this.userFound = true;
+          this.service.userId = cred.userId;
           this.router.navigate(['/BankUser'])
-        }else
-          alert("wrong password!");
-      }else
-        alert("user not found");
+        }
+      }
     });
+    if(!this.userFound)
+      alert("user Not Found");
   }
 
 }
